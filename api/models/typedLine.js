@@ -46,6 +46,7 @@ function TypedLine(line) {
         } else {
             this.expirationDate = new Date(year, month - 1, day);
         }
+        // If barcode[2] isn't 6, 7, 8 or 9, then typedLine is invalid
         let modulo = function () { return false; };
         if (this.barcode[2] == 6 || this.barcode[2] == 7) {
             modulo = modulo10;

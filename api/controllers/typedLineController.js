@@ -1,7 +1,6 @@
 TypedLine = require('../models/typedLine');
 
 exports.parseTypedLine = function(req, res) {
-    console.log("body: " + JSON.stringify(req.body));
     let typedLine = new TypedLine(req.body.typedLine);
     res.json({
         "isValid": typedLine.isValid(),
