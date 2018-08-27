@@ -7,6 +7,7 @@ exports.parseTypedLine = function(req, res) {
         "isValid": typedLine.isValid(),
         "value": typedLine.value,
         "expirationDate": typedLine.expirationDate,
-        "barcode": typedLine.getBarcode()
+        "barcode": typedLine.barcode,
+        "type": typedLine.type
     });
 }
